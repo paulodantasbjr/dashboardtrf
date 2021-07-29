@@ -2,7 +2,9 @@ import { connectDB } from '../../../utils/connectDB'
 import Users from '../../../model/userModel'
 import { valid } from '../../../utils/valid'
 import bcrypt from 'bcrypt'
+import Cors from 'cors'
 
+Cors()
 connectDB()
 
 //para o registro ser somente via post
