@@ -7,7 +7,7 @@ import { valid } from '../../utils/valid'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { TextField } from '@material-ui/core'
-import { SubmitButton } from '../../components/Button'
+import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 import { Sign } from '../../components/Sign'
 
@@ -40,13 +40,12 @@ export default function SignUp() {
     if (res.err)
       return dispatch({ type: 'NOTIFY', payload: { error: res.err } })
 
+    router.push('/')
     return dispatch({ type: 'NOTIFY', payload: { success: res.msg } })
   }
-
   useEffect(() => {
     if (Object.keys(auth).length !== 0) router.push('/')
   }, [auth])
-
   return (
     <Layout>
       <ContainerStyled>
@@ -67,6 +66,7 @@ export default function SignUp() {
             <TextField
               label='Digite seu e-mail*'
               id='email'
+              type='email'
               variant='outlined'
               name='email'
               value={email}
@@ -77,6 +77,7 @@ export default function SignUp() {
             <TextField
               label='Digite sua senha*'
               id='password'
+              type='password'
               variant='outlined'
               name='password'
               value={password}
@@ -87,6 +88,7 @@ export default function SignUp() {
             <TextField
               label='Confirme sua senha*'
               id='cf_password'
+              type='password'
               variant='outlined'
               name='cf_password'
               value={cf_password}
@@ -94,7 +96,7 @@ export default function SignUp() {
             />
           </div>
           <div className='form-field'>
-            <SubmitButton type='submit'>Entrar</SubmitButton>
+            <Button>Cadastrar</Button>
           </div>
           <div className='form-link'>
             <p>

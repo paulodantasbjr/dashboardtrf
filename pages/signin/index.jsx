@@ -6,7 +6,7 @@ import ContainerStyled from './styled'
 import { Sign } from '../../components/Sign'
 import Link from 'next/link'
 import { TextField } from '@material-ui/core'
-import { SubmitButton } from '../../components/Button'
+import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 import { useRouter } from 'next/router'
 import Cookie from 'js-cookie'
@@ -27,13 +27,22 @@ export default function Signin() {
     dispatch({ type: 'NOTIFY', payload: {} })
   }
 
+  const handleForgotPassword = () => {
+    dispatch({
+      type: 'NOTIFY',
+      payload: { info: 'Contacte o administrador do sistema ' },
+    })
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     dispatch({ type: 'NOTIFY', payload: { loading: true } })
+
     const res = await postData('auth/login', userData)
 
     if (res.err)
       return dispatch({ type: 'NOTIFY', payload: { error: res.err } })
+
     dispatch({ type: 'NOTIFY', payload: { success: res.msg } })
 
     dispatch({
@@ -87,14 +96,14 @@ export default function Signin() {
             />
           </div>
           <div className='form-field'>
-            <SubmitButton type='submit'>Entrar</SubmitButton>
+            <Button>Entrar</Button>
           </div>
           <div className='form-link'>
             <p>
               Esqueceu a senha?
               <span>
-                <Link href='#'>
-                  <a>clique aqui</a>
+                <Link href=''>
+                  <a onClick={handleForgotPassword}>clique aqui</a>
                 </Link>
               </span>
             </p>

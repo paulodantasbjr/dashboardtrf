@@ -16,5 +16,5 @@ export const valid = (name, email, password, cf_password) => {
   if (password.length < 6) return 'Senha deve ter pelo menos 6 caracteres.'
 
   //verifica se a senha bate com o confirma senha
-  if (password !== cf_password) return 'Senha nao estao iguais.'
+  if (password !== cf_password) return 'As senhas devem ser iguais.'
 }

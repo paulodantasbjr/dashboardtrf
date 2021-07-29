@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
-export const LinkButtonStyled = styled.a`
-  background: linear-gradient(180deg, #6d63ff 0%, #3b32c0 100%);
-  border-radius: 40px;
+export const ButtonStyled = styled.button`
+  width: 100%;
+  max-height: 70px;
+  background: #554ce1;
   padding: 1rem 2rem;
-  color: #fffafa;
-  font-size: 18px;
-`
-
-export const SubmitButtonStyled = styled.button`
-  background: linear-gradient(180deg, #6d63ff 0%, #3b32c0 100%);
-  border-radius: 40px;
-  padding: 1rem 2rem;
-  color: #fffafa;
-  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    background: #e95f8b;
+  }
 `
