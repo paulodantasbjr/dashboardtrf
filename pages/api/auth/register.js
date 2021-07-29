@@ -4,7 +4,6 @@ import { valid } from '../../../utils/valid'
 import bcrypt from 'bcrypt'
 import Cors from 'cors'
 
-Cors()
 connectDB()
 
 //para o registro ser somente via post
@@ -40,7 +39,7 @@ const register = async (req, res) => {
     })
     //sava no banco
     await newUser.save()
-    res.json({ msg: 'Cadastro realizado com sucesso!' })
+    res.status(200).json({ msg: 'Cadastro realizado com sucesso!' })
   } catch (err) {
     return res.status(500).json({ err: err.message })
   }

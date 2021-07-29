@@ -4,8 +4,6 @@ import jwt from 'jsonwebtoken'
 import { createAccessToken } from '../../../utils/generateToken'
 import Cors from 'cors'
 
-Cors()
-
 //abre uma instancia do banco
 connectDB()
 
