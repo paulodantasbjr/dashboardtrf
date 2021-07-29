@@ -29,6 +29,9 @@ const ContainerStyled = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-width: 550px) {
+        flex-direction: column;
+      }
       p {
         font-size: 12px;
         line-height: 26px;
