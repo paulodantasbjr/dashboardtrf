@@ -10,7 +10,7 @@ module.exports = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://dashboardtrf.vercel.app/:path*',
+        destination: 'https://dashboardtrf.vercel.app/api/:path*',
       },
     ]
   },
