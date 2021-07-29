@@ -2,7 +2,6 @@ import { connectDB } from '../../../utils/connectDB'
 import Users from '../../../model/userModel'
 import jwt from 'jsonwebtoken'
 import { createAccessToken } from '../../../utils/generateToken'
-import Cors from 'cors'
 
 //abre uma instancia do banco
 connectDB()

@@ -5,7 +5,6 @@ import {
   createAccessToken,
   createRefreshToken,
 } from '../../../utils/generateToken'
-import Cors from 'cors'
 
 //abre uma instancia do banco
 connectDB()
