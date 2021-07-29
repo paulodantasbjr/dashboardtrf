@@ -6,4 +6,24 @@ module.exports = {
     ACCESS_TOKEN_SECRET: 'MEU_TOKEN_SECRETO',
     REFRESH_TOKEN_SECRET: 'MEU_REFRESH_TOKEN_SECRETO',
   },
+  async headers() {
+    return [
+      {
+        source: 'https://dashboardtrf.vercel.app',
+        headers: [
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value:
+              'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+          },
+        ],
+      },
+    ]
+  },
 }
