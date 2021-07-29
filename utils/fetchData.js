@@ -4,6 +4,11 @@ export const getData = async (url, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {
     method: 'GET',
     headers: {
+      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+      'Access-Control-Allow-Headers':
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
       Authorization: token,
     },
   })
@@ -16,6 +21,11 @@ export const postData = async (url, post, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {
     method: 'POST',
     headers: {
+      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+      'Access-Control-Allow-Headers':
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
       'Content-Type': 'application/json',
       Authorization: token,
     },
@@ -30,6 +40,11 @@ export const putData = async (url, post, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {
     method: 'PUT',
     headers: {
+      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+      'Access-Control-Allow-Headers':
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
       'Content-Type': 'application/json',
       Authorization: token,
     },
@@ -44,6 +59,11 @@ export const patchData = async (url, post, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {
     method: 'PATCH',
     headers: {
+      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+      'Access-Control-Allow-Headers':
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
       'Content-Type': 'application/json',
       Authorization: token,
     },
@@ -58,6 +78,11 @@ export const deleteData = async (url, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {
     method: 'DELETE',
     headers: {
+      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+      'Access-Control-Allow-Headers':
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
       'Content-Type': 'application/json',
       Authorization: token,
     },
