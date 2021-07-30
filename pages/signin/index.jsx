@@ -59,10 +59,11 @@ export default function Signin() {
     })
 
     localStorage.setItem('firstLogin', true)
+    router.push('/dashboard')
   }
 
   useEffect(() => {
-    if (Object.keys(auth).length !== 0) router.push('/')
+    if (Object.keys(auth).length !== 0) router.push('/dashboard')
   }, [auth])
 
   return (

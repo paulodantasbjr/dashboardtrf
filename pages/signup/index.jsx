@@ -40,12 +40,14 @@ export default function SignUp() {
     if (res.err)
       return dispatch({ type: 'NOTIFY', payload: { error: res.err } })
 
-    router.push('/')
+    router.push('/dashboard')
     return dispatch({ type: 'NOTIFY', payload: { success: res.msg } })
   }
+
   useEffect(() => {
-    if (Object.keys(auth).length !== 0) router.push('/')
+    if (Object.keys(auth).length !== 0) router.push('/dashboard')
   }, [auth])
+
   return (
     <Layout>
       <ContainerStyled>

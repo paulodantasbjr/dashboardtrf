@@ -6,12 +6,4 @@ module.exports = {
     ACCESS_TOKEN_SECRET: 'MEU_TOKEN_SECRETO',
     REFRESH_TOKEN_SECRET: 'MEU_REFRESH_TOKEN_SECRETO',
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://dashboardtrf.vercel.app/api/:path*',
-      },
-    ]
-  },
 }
